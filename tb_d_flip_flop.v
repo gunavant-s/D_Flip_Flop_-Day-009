@@ -34,7 +34,14 @@ module tb_d_flip_flop;
     
         initial begin
             clk = 0;
-            d = 1; 
+           #5 d = 1;
+           #10 d = 0;
+           #5 d = 0;
+           #10 d = 1;
+           #5 d = 0;
+           #10 d = 1;
+           #5 d = 0;
+           #10 d = 1; 
         end
         
         always #5 
